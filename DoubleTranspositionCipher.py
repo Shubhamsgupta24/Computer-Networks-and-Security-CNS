@@ -1,4 +1,5 @@
 from itertools import permutations
+import time
 
 def create_matrix(text, rows, cols):
     matrix = [['' for _ in range(cols)] for _ in range(rows)]
@@ -85,6 +86,6 @@ possible_perms = generate_permutations(len(row_perm))
 
 found_row_perm, found_col_perm, decrypted_text = cryptanalysis_double_transposition(ciphertext, plaintext, possible_perms)
 
-print("Found row permutation:", found_row_perm)
-print("Found column permutation:", found_col_perm)
+print("Priority array of first key:", found_row_perm)
+print("Priority array of Second key:", found_col_perm)
 print("Decrypted text:", decrypted_text)

@@ -36,6 +36,7 @@ def perform_decryption(ciphertext_input, cipher_key):
 def main():
     shift_value = int(input("Enter the shift value for the cipher: "))
     cipher_key = create_cipher_key(shift_value)
+    print(cipher_key)
 
     user_choice = input("Encrypt or decrypt? (e/d): ").lower()
     if user_choice == 'e':
